@@ -1,6 +1,20 @@
 {% extends 'header.html' %} 
 {% block content %}
 <main>
+    <style>
+        /* Estilos para las tarjetas según el corresponda (solo para los borde) */
+        .card-alive {
+            border: 3px solid green;
+        }
+
+        .card-dead {
+            border: 3px solid red;
+        }
+
+        .card-other {
+            border: 3px solid orange;
+        }
+    </style>
     <h1 class="text-center">Buscador Rick & Morty</h1>
 
     <div class="d-flex justify-content-end" style="margin-bottom: 1%; margin-right: 2rem;">
