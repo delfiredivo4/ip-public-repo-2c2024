@@ -17,10 +17,7 @@ def home(request):
 
     return render(request, 'home.html', { 'images': images, 'favourite_list': favourite_list })
 
-#<!-- BUSCADOR, para el buscador tenemos la funcion search, la cual pide el resultado del label y el input del boton y el resultador lo transforma al nombre "query"
-# luego "transforma" lo que ponemos en el label a "search_msg" y si search_msg no esta vacio entonces busca todas las imagenes que tengan como coincidencia 
-#lo que pusimos en el label del home para asi crear la variable de imagenes_filtradas, luego pedimos al home.html que devuelva todas las imagenes con sus datos: nombre, estado, vivo,muerto, etc
-#que coincidan con la variable imagenes filtradas. (que es lo que buscamos con el label y el boton) -->
+#<!-- BUSCADOR -->
 def search(request):
     search_msg = request.POST.get('query', '')
     # si el texto ingresado no es vacío, trae las imágenes y favoritos desde services.py,
